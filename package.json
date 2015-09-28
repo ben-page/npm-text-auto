@@ -1,0 +1,11 @@
+{
+  "name": "text-auto",
+  "version": "0.0.0",
+  "description": "Easily automatically convert line ending when publishing and installing a module.",
+  "main": "main.js",
+  "author": "Ben Page <ben.page@openreign.com>",
+  "license": "MIT",
+  "dependencies": {
+    "minimatch": "^3.0.0"
+  }
+}
