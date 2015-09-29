@@ -1,6 +1,6 @@
 {
   "name": "text-auto",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Easily automatically convert line ending when publishing and installing a module.",
   "main": "./lib/main.js",
   "directories": {
