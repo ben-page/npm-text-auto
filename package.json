@@ -1,10 +1,14 @@
 {
   "name": "npm-text-auto",
   "version": "0.1.0",
-  "description": "Easily automatically convert line ending when publishing and installing a module.",
+  "description": "Automatically convert to unix style line ending to when publishing your module.",
   "main": "./lib/main.js",
   "directories": {
+    "bin": "./bin",
     "lib": "./lib"
+  },
+  "bin": {
+    "npm-text-auto": "./bin/npm-text-auto"
   },
   "author": "Ben Page <ben.page@openreign.com>",
   "license": "MIT",
