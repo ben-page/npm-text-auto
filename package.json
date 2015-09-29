@@ -1,6 +1,6 @@
 {
   "name": "npm-text-auto",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "Easily automatically convert line ending when publishing and installing a module.",
   "main": "./lib/main.js",
   "directories": {
