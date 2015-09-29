@@ -1,17 +1,12 @@
-### Description ###
-`npm-text-auto` automatically convert to unix style line ending to when publishing your module.
+***This module has not been completely tested and should be considered a beta. It's intended to modify your source files, so use with caution. Bug reports and pull request are welcome.***
 
-*This module is mostly untested and should be considered in beta. It's designed to modify your files, so use with extreme caution.*
+### Features ###
+Before publishing, `npm-text-auto` converts text files to Unix style line endings (\n). After publishing, it converts them back to the default line ending for your OS (ie. \r\n for Windows).
 
-### Overview ###
-Before publishing, `npm-text-auto` converts text file line ending to '\n'. After publishing, it converts them back to the default line ending for your OS (ie. '\r\n' for Windows).
-
-`npm-text-auto` uses the same binary file detection method as GIT.
-
-`npm-text-auto` does not modify files excluded by your .npmignore (or .gitignore) file.
+This acts like having `* text=auto` in your .gitattributes file, only for npm publish.
 
 ### Usage ###
-`npm-text-auto` can be used a global module or a local module.
+`npm-text-auto` can be used as a global module, a local module, or run from the command line.
 #### Global Module ####
 1. Install as a global module
 
@@ -26,7 +21,7 @@ Before publishing, `npm-text-auto` converts text file line ending to '\n'. After
 	  "postpublish": "npm-text-auto"
 	}
 	```
-3. Publish as normal
+3. Publish
 
 #### Local Module ####
 1. Install as a development dependency
@@ -42,4 +37,26 @@ Before publishing, `npm-text-auto` converts text file line ending to '\n'. After
 	  "postpublish": "node node_modules/npm-text-auto"
 	}
 	```
-3. Publish as normal
+3. Publish
+
+#### Command Line ####
+1. Install as a global module
+
+	```shell
+	npm install npm-text-auto -g
+	```
+
+2. Run the hook manually:
+	```shell
+	npm-text-auto prepublish
+	npm-text-auto postpublish
+	```
+
+### Details ###
+* On systems where the default EOL is \n, `npm-text-auto` does not modify any files.
+* The binary file detection method as the same as GIT. It checks the first 8000 bytes for the presence of a null byte.
+* File modified timestamp is preserved.
+* Files with mixed EOL styles are convert to the correct EOL.
+* The `.npmignore` (or `.gitignore`) file are processed using the same module as npm. Excluded files will not have their EOL modified.
+* `package.json` , files in `node_modules`, and files in version control directories files ( `.git` `.hg` `.svn` `CVS`) are never modified.
+* `.gitattributes` is not supported. If enough people need this, I may add it.
