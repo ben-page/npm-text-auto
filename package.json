@@ -12,6 +12,10 @@
   },
   "author": "Ben Page <ben.page@openreign.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ben-page/npm-text-auto.git"
+  },
   "dependencies": {
     "minimatch": "^3.0.0"
   }
