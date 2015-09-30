@@ -6,22 +6,7 @@ Before publishing, `npm-text-auto` converts text files to Unix style line ending
 This acts like having `* text=auto` in your .gitattributes file, only for npm publish.
 
 ### Usage ###
-`npm-text-auto` can be used as a global module, a local module, or run from the command line.
-#### Global Module ####
-1. Install as a global module
-
-	```shell
-	npm install npm-text-auto -g
-	```
-
-2. Add hook scripts to `package.json`
-	```json
-	"scripts": {
-	  "prepublish": "npm-text-auto",
-	  "postpublish": "npm-text-auto"
-	}
-	```
-3. Publish
+`npm-text-auto` can be used as a local module or run from the command line.
 
 #### Local Module ####
 1. Install as a development dependency
@@ -33,8 +18,8 @@ This acts like having `* text=auto` in your .gitattributes file, only for npm pu
 2. Add hook scripts to `package.json`
 	```json
 	"scripts": {
-	  "prepublish": "node node_modules/npm-text-auto",
-	  "postpublish": "node node_modules/npm-text-auto"
+	  "prepublish": "npm-text-auto",
+	  "postpublish": "npm-text-auto"
 	}
 	```
 3. Publish
