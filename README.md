@@ -1,3 +1,5 @@
+***I'm no longer developing npm-text-auto. I have decided it's better to disable autocrlf and stick to LF line endings on all platforms. I highly recommend you do that same.***
+
 ***This module has not been completely tested and should be considered a beta. It's intended to modify your source files, so use with caution. Bug reports and pull request are welcome.***
 
 ### Features ###
