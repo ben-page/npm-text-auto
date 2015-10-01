@@ -1,6 +1,6 @@
 {
   "name": "npm-text-auto",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Automatically convert your text files to unix style line ending before publishing your module.",
   "main": "./lib/main.js",
   "directories": {
